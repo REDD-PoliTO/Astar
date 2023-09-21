@@ -13,7 +13,6 @@ set(CMAKE_CXX_FLAGS -Wall )
 
 #CACHE VARIABLES
 set(PRINT_FILE ON CACHE BOOL "")
-set(USE_MPI OFF CACHE BOOL "")
 set(USE_OPENMP OFF CACHE BOOL "")
 set(LOGGING OFF CACHE BOOL "")
 if(${LOGGING})
@@ -24,13 +23,6 @@ if(${PRINT_FILE})
 endif()
 #if(DEFINED CACHE{Activate_MPI} IS 1)
 
-
-
-
-if(${USE_MPI})
-    message("Parallel Code Activation Compile")
-    add_compile_definitions(USE_MPI=1)
-endif()
 if(${USE_OPENMP})
     add_compile_definitions(USE_OPENMP=1)
     # OpenMP
