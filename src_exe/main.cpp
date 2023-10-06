@@ -10,10 +10,6 @@
 #include "auxMacros.hpp"
 #include <unistd.h>
 
-#if USE_MPI ///Parallel native libraries
-//#include <mpi.h>
-#endif
-
 #if USE_OPENMP
 //#include <ompi_config.h>
 #include <omp.h>
