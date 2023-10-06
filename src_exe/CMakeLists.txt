@@ -21,7 +21,6 @@ endif()
 if(${PRINT_FILE})
     add_compile_definitions(ONFILE=1)
 endif()
-#if(DEFINED CACHE{Activate_MPI} IS 1)
 
 if(${USE_OPENMP})
     add_compile_definitions(USE_OPENMP=1)
