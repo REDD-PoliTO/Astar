@@ -59,9 +59,9 @@ int main(int argc, char** argv)
     int status;
 
     //#if USE_OPENMP
-//    status = mkdir(nameFold.c_str(), 0777);
+      status = mkdir(nameFold.c_str(), 0777);
     //#else
-        status = mkdir(nameFold.c_str());
+  //      status = mkdir(nameFold.c_str());
     //#endif
 
     Astar astar(&pointCollection);

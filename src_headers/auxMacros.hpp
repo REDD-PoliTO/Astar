@@ -1,4 +1,4 @@
-#define INPUTFOLDER "CODEFOLDER"
+#define INPUTFOLDER "/home/araeli/Astar"
 #define OUTPUTFOLDER "PATHS"
 #define THREAD_NUM 3
 

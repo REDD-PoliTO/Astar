@@ -67,9 +67,6 @@ Output::ExitCodes Astar::ComputeTortuosity(bool asmean)
         {
             minTort=FLT_MAX;
         }
-#if USE_OPENMP
-#pragma omp parallel for num_threads(THREAD_NUM)
-#endif
         for(unsigned int j=0; j< _Np.at(i);j++)
         {
 
@@ -143,13 +140,16 @@ Output::ExitCodes Astar::AStar3D()
 
     string outputFold=OUTPUTFOLDER;
 
-
+    cout << endl << "AStar Loop Begin"<< endl;
 #if USE_OPENMP
 #pragma omp parallel for num_threads(THREAD_NUM)
 #endif
     for(unsigned int couple=0; couple<numCouple;couple+=2)
     {
-
+#if VERBOSE
+	cout << endl << "Couple " << couple;
+	cout<< flush;
+#endif
         unsigned int currentNumberPoints=0,numPoro=_grid._numberOfPores, numberPointsReversing;
 
 #if USE_OPENMP
