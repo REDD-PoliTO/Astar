@@ -12,6 +12,9 @@ set(CMAKE_CXX_FLAGS -Wall )
 
 
 #CACHE VARIABLES
+#PRINT_FILE ON to print the paths on FILE
+#USE_OPENMP ON to parallel run
+#LOGGING ON for a verbose version of the run
 set(PRINT_FILE OFF CACHE BOOL "")
 set(USE_OPENMP ON CACHE BOOL "")
 set(LOGGING ON CACHE BOOL "")
