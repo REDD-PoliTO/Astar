@@ -1,4 +1,4 @@
-#define INPUTFOLDER "/home/araeli/Astar"
+#define INPUTFOLDER "FOLDER_PATH_TO_REPLACE"
 #define OUTPUTFOLDER "PATHS"
 #define THREAD_NUM 3
 

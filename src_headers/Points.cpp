@@ -114,7 +114,7 @@ Output::ExitCodes Points::GetNeighs(SinglePoint &A, vector<SinglePoint *> &neigh
                 int checkx=A.x+x;
                 int checky=A.y+y;
                 int checkz=A.z+z;
-                if(checkx>=0 && checkx < _nx && checky>=0 && checky < _ny && checkz>=0 && checkz < _nz)
+                if(checkx>=0 && checkx < (int)(_nx) && checky>=0 && checky < (int)(_ny) && checkz>=0 && checkz < (int)(_nz))
                 {
                     unsigned int vicino=checkx+checky*_nx+checkz*_nx*_ny;
                     int id=FromGlobToPor(vicino);
@@ -133,7 +133,7 @@ unsigned int Points::GetPointIndex(unsigned int &x, unsigned int &y, unsigned in
     unsigned int index=_numberOfPoints;
     for(unsigned int i=0; i< _numberOfPoints;i++)
     {
-        if(_gridFull.at(i).x==x && _gridFull.at(i).y ==y && _gridFull.at(i).z==z)
+        if(_gridFull.at(i).x==(int)(x) && _gridFull.at(i).y ==(int)(y) && _gridFull.at(i).z==(int)(z))
         {
             index=i;
             break;
@@ -161,7 +161,6 @@ Output::ExitCodes Points::ImportFromFile( const string &filename)
     }
     else
     {
-        int val;
         int numberLines=0;
         int memX=0, memY=0, memZ=0;
         _nx=1,_ny=1,_nz=1;
@@ -244,12 +243,12 @@ Output::ExitCodes Points::ConfigureInletOutlet(const string &filename, const uns
 
 
         ///Storing the points collection
-        while(getline(inFile,line) && numberLines<numData)
+        while(getline(inFile,line) && numberLines<(int)(numData))
         {
 
             vector<string> parser;
             parser=Input::Split(line,"\t");
-            for(unsigned int i=0;i<_numberProperties-1;i++)
+            for(int i=0;i<_numberProperties-1;i++)
             {
                 val.at(i)=atoi(parser.at(i).c_str());
                 val.at(i)--;
@@ -304,12 +303,12 @@ Output::ExitCodes Points::ConfigureInletOutlet(const string &filename, const uns
 Output::ExitCodes Points::ConfigureInletOutletVector()
 {
     unsigned int couples=0;
-    for(unsigned int i=0; i<_numberProperties-1;i++)
+    for(int i=0; i<_numberProperties-1;i++)
     {
         couples= couples+ _startSizes.at(i)*_targetSizes.at(i);
     }
     path_couples.reserve(couples*2);
-    for(unsigned int i=0; i<_numberProperties-1;i++)
+    for(int i=0; i<_numberProperties-1;i++)
     {
         for(unsigned int j=0; j<_startSizes.at(i);j++)
         {
