@@ -1,6 +1,6 @@
 # Astar
 
-This code has been submitted to Computers & Geosciences https://www.sciencedirect.com/journal/computers-and-geosciences"
+This code has been submitted to Computers & Geosciences https://www.sciencedirect.com/journal/computers-and-geosciences
 
 GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 
