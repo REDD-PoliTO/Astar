@@ -14,11 +14,11 @@ struct SinglePoint{
     int x;
     int y;
     int z;
-    bool medium;
-    unsigned int globidx;
-    int pourous_index; /// -1 values for medium points
-    vector<SinglePoint*> _neighbourhood;
-    bool _deadSuspect = false;
+    bool medium; /// 0 to pores, 1 to medium
+    unsigned int globidx; ///Global index of the point
+    int pourous_index; /// Index of the point in the pore structure -1 values for medium points
+    vector<SinglePoint*> _neighbourhood; ///Vector of pointers to the neighbors
+    bool _deadSuspect = false; ///True when the point is suspected to be isolated
     bool operator == (const SinglePoint& A) const {
         return ((A.x == x)&&(A.y==y)&&(A.z==z));
     }
@@ -30,6 +30,7 @@ bool find(SinglePoint &point, vector<SinglePoint *> &list);
 void equal(SinglePoint &A, SinglePoint& B);
 bool SamePoint(SinglePoint A, SinglePoint *B);
 bool SamePoint(SinglePoint A, SinglePoint B);
+/// Print function
 void PrintPoint(SinglePoint A, bool matlabFormat=false);
 
 
@@ -45,8 +46,8 @@ protected:
     double _porosity;
     vector <vector<unsigned int>> inlet_indices;
     vector <vector<unsigned int>> target_indices;
-    vector <unsigned int> path_couples;
-    vector<unsigned int> _startSizes;
+    vector <unsigned int> path_couples; ///couples of indices inlet/target 
+    vector<unsigned int> _startSizes; 
     vector<unsigned int> _targetSizes;
     vector<unsigned int> _globalIndexing;///It keeps in memory the global index from porous points
     unsigned int _nx, _ny,_nz;
