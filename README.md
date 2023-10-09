@@ -1,6 +1,6 @@
 # Astar
 
-This library is related to the results presented in the submitted article "A parallel programming application of the A* algorithm in Digital Rock Physics"
+This library is related to the results presented in the submitted article 'A parallel programming application of the A* algorithm in Digital Rock Physics'
 Computers & Geosciences https://www.sciencedirect.com/journal/computers-and-geosciences
 GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 
