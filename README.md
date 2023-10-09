@@ -30,3 +30,5 @@ make
 ```
 
 replace ``` 5 ``` with the number of test inlet/outlet per direction (maximum 50). The given example will run 5 inlet points and 5 outlet points per direction. All the available threads will be used.
+
+The test case ```test161 ``` is related to the Sample161 presented in the article. 
