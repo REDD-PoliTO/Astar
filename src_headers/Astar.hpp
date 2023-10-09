@@ -22,8 +22,8 @@ protected:
     PathVec _optimalpaths;
 
     vector<unsigned int> _Np; ///Number of Paths
-    unsigned int _numDirections; /// Numbero of directions
-    vector<double> _tortuosity; ///Tortuositi Values
+    unsigned int _numDirections; /// Number of directions
+    vector<double> _tortuosity; ///Tortuosity Values
 
 
 
@@ -32,7 +32,7 @@ public:
     Astar(Points* pointCollection);
     ~Astar();
 
-    Output::ExitCodes ComputePathsDimension(); /// number of paths per direction
+    Output::ExitCodes ComputePathsDimension(); /// Number of paths per direction
     double ComputePathLenght(unsigned int& pathIdx, bool serial=false); /// Compute the lenght of a path from the inlet point to the outlet point
     Output::ExitCodes ComputeNeighborhood(); ///Compute neighbours at beginning of computation
     Output::ExitCodes ComputeTortuosity(bool asmean=true); ///If TRUE tortuosity is computed by Mean Value, else as minimum value
