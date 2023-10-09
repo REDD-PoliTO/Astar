@@ -1,7 +1,7 @@
 # Astar
 
-This library is related to the results presented in the submitted article 'A parallel programming application of the A* algorithm in Digital Rock Physics'
-Computers & Geosciences https://www.sciencedirect.com/journal/computers-and-geosciences
+This library is related to the results presented in the submitted article 'A parallel programming application of the A* algorithm in Digital Rock Physics', Computers & Geosciences https://www.sciencedirect.com/journal/computers-and-geosciences
+
 GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 
 ```rb
@@ -29,5 +29,4 @@ make
 ./astarSolver test161 5
 ```
 
-replace ``` 5 ``` with the number of test inlet/outlet per direction (maximum 50)
-The example will run 5 inlet points and 5 outlet points per direction. All the available threads will be used.
+replace ``` 5 ``` with the number of test inlet/outlet per direction (maximum 50). The given example will run 5 inlet points and 5 outlet points per direction. All the available threads will be used.
