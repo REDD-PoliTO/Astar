@@ -1,6 +1,7 @@
 # Astar
 
-This code has been submitted to 
+This code has been submitted to Computers & Geosciences https://www.sciencedirect.com/journal/computers-and-geosciences"
+GNU Licence
 ```rb
 git clone https://github.com/REDD-PoliTO/Astar.git
 ```
